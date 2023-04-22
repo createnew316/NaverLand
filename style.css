@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* body{
+    height: 200vh;
+} */
+#main{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  
+}
+#home{
+    width: 100vw;
+     min-height: 100vh;
+    background-color: #FFFAF0;
+
+}
+canvas{
+    width:100%;
+    height:100% ;
+
+}
+.loader{
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8D5EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+
+.loader img{
+  /* position: absolute; */
+  /* top: 0%; */
+  scale: 0.5;
+  filter: invert(100%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+  #secondpage{
+    width: 100%;
+    height: 100vh;
+    background-color:#FFFAF0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    gap: 20vw;
+  }
+  #secondpage h1{
+    font-size: 6vw;
+    font-family: playfair display;
+    font-weight: 100;
+    /* opacity:0.3; */
+  }
+  #secondpage h4{
+    font-size: 2vw;
+    font-family: playfair display;
+    font-weight: 100;
+  }
+  #secondpage img{
+    width: 60%;
+    top: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,0%);
+  }
+  #overlay{
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 9999;
+
+  }
+   #overlay #text{
+    top: 40%;
+    right:5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+   #overlay #text h1{
+    color: #ffff;
+    font-size: 60px;
+    font-family: playfair display;
+    font-weight: 200;
+    width: 430px;
+  
+  }
+  #overlay #text h1:nth-child(2){
+    font-size: 20px;
+  width: 300px;
+  }
+  #overlay1 #site{
+    z-index: 999999;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    top: 50%;
+    left: -4.5%;
+    /* position: absolute; */
+    rotate: 90deg;
+    color: #fff;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+    position: fixed;
+    
+  }
+  #overlay1 #site h1{
+    rotate: 270deg;
+    font-family: gilroy;
+  
+  }
+  #overlay1 #site h5{
+  font-size: 15px;
+  rotate: 180deg;
+  font-family: gilroy;
+  padding: -10px 10px;
+  font-weight: 100;
+
+  }
+  #overlay #scroll{
+    width: 200px;
+    height: 50px;
+    /* background-color: aquamarine; */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 80%;
+    right:5%;
+    rotate: 90deg;
+  }
+  #overlay #scroll  h4{
+    color: #fff;
+    font-family: gilroy;
+    font-weight: 500;
+  }
+  #overlay #scroll img{
+    rotate: 270deg;
+  }
+  #overlay1  #hamburger{
+    z-index: 999999;
+    /* background-color: red; */
+    position: fixed;
+    right: 5%;
+    top: 7%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+    height: 5vh;
+  }
+  #overlay1  #hamburger .ham{
+    width: 45px;
+    height: 1.5px;
+    background-color: #fff;
+  }
+  #hampage{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    top: -100%;
+    left: 0;
+    display: flex;
+    z-index: 99999;
+    /* display: none; */
+    position: fixed;
+    color: #000;
+  }
+  #hampage #hamleft{
+    width: 50%;
+    height: 100vh;
+    background-color:#fff;
+    position: relative;
+  }
+  #hampage #hamleft .texto{
+    display: flex;
+    flex-direction: column;
+  top: 30%;
+  left: 7%;
+  position: absolute;
+  gap: 2vw;
+  line-height: 1.3;
+
+  }
+  #hampage #hamleft .texto h1{
+    width: 550px;
+    font-size: 6rem;
+    font-family: playfair display ;
+    font-weight: 100;
+  }
+  #hampage #hamleft .texto h4{
+    font-size: 20px;
+    font-family: gilroy;
+  }
+  #hampage #hamleft .texto h5{
+    font-size: 15px;
+    font-family: gilroy;
+  }
+  #hampage #hamright{
+    width: 50%;
+    height: 100vh;
+    background-color:#fff;
+    position: relative;
+    overflow: hidden;
+  }
+  #hampage #hamright .texto{
+    display: flex;
+    flex-direction: column;
+  top: 30%;
+  left: 10%;
+  position: absolute;
+  gap: 3vw;
+  line-height: 1;
+
+  }
+  #hampage #hamright .texto h1{
+    width: 50vw;
+    font-size: 3.5rem;
+    font-family: playfair display ;
+    font-weight: 100;
+    /* background-color: red; */
+  }
+  #hampage #hamright .texto h4{
+    font-size: 20px;
+    font-family: gilroy;
+    color: rgb(241, 127, 146);
+  }
+  #hampage #hamright .texto h5{
+    font-size: 15px;
+    font-family: gilroy;
+  }
+  #hampage #hamright #bottom{
+    width: 300px;
+    height: 100px;
+    /* background-color: red; */
+    bottom: 0%;
+    left: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+  #hampage #hamright #bottom i{
+font-size: 30px;
+color:pink;
+  }
+  
+  #thirdpage{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFAF0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  #thirdpage h1{
+    font-size: 3.5vw;
+    font-family: playfair display;
+    font-weight: 300;
+    width: 80vw;
+
+  }
+  #fourthpage{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFAF0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    line-height: 1;
+  }
+  #fourthpage #texti{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 7vw;
+    flex-direction: column;
+    /* background-color: red; */
+  }
+  #fourthpage h1{
+    font-size: 3.5vw;
+    font-family: playfair display;
+    font-weight: 300;
+    width: 70vw;
+
+  }
+  #fourthpage #texti h2{
+    font-size: 3vw;
+    width: 55vw;
+    font-family: playfair display;
+    font-weight: 300;
+  }
+  #fourthpage #texti h4{
+font-size: 2vw;
+font-family: gilroy;
+font-weight: 600;
+  }
+  #fifthpage{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  #fifthpage #fifleft{
+    width: 50%;
+    height: 100vh;
+    background-color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* padding: 20vw 0vw; */
+  
+  }
+  #fifthpage #fifleft h2{
+    font-size: 1.5vw;
+    font-family: gilroy;
+    /* margin-left: -20vw; */
+    font-weight: 700;
+  }
+  #fifthpage #expo{
+    transform: translateY(14%);
+    gap: 6vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vw;
+  }
+  
+  #fifthpage #fifleft p{
+font-size: 2.7vw;
+font-family: playfair display;
+width: 100%;
+
+  }
+  #fifthpage #fifright{
+    width: 50%;
+    height: 100vh;
+    /* background-color:#fff; */
+  }
+  #fifthpage #fifright video{
+    width: 40%;
+    position: absolute;
+    top: 11.5%;
+    right: 5%;
+  }
+  #sixthpage{
+    width: 100%;
+    height: 140vh;
+    background-color: #fff;
+    text-align: center;
+  position: relative;
+  padding: 15vh 0 0vh 8vw;
+}
+#sixthpage img{
+  margin-right: 9vw;
+  margin-bottom: 18vh;
+  scale:1;
+  margin-top: 50px;
+  
+}
+
+#sixthpage h1{
+    text-align: center;
+    bottom: 10%;
+    left: 0%;
+    position: absolute;
+    font-size: 4vw;
+    width: 100%;
+    font-family:playfair display;
+    font-weight: 600;
+  }
+  #seventhpage{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    background-image: url(https://neverland.agency/assets/0001.4d684736.webp);
+    background-size: cover;
+    background-position: center;
+  }
+  #cursor{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* position: absolute; */
+    transform: translate(-50%,-50%);
+    z-index: 999999;
+  }
